@@ -30,6 +30,6 @@ nav::after {
 .navigation li a:link {
   text-decoration: none;
   text-transform: uppercase;
-  color: #333;
+  /* color: #333; */
 }
 

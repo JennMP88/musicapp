@@ -9,9 +9,18 @@ return(
 <>
 <nav>
   <ul class="navigation">
-    <li><a href="#">About</a></li>
-     <li><a href="#">Listen</a></li>
-     <li><a href="#">Genre</a></li>
+    <li>
+      <Link className="page" to="/about">About</Link>
+    </li>
+
+    <li>
+      <Link className="page" to="/listen">Listen</Link>
+    </li>
+
+    <li>
+      <Link className="page" to="/genres">Genres</Link>
+    </li>
+     
   </ul>
 
 </nav>

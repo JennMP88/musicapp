@@ -5,6 +5,7 @@ import {HashRouter, Route, Switch} from 'react-router-dom';
 import Navbar from "./components/Navbar"
 import Header from "./components/Header"
 import About from "./components/About"
+import Genres from "./components/Genres"
 import Footer from "./components/Footer"
 
 
@@ -19,6 +20,7 @@ render(){
       <Switch>
       <Route exact path='/' component={Header}/>
       <Route exact path='/about' component={About}/>
+      <Route exact path='/genres' component={Genres}/>
       </Switch>
       <Route path='/' component={Footer}/>
      </HashRouter>

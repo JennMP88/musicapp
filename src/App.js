@@ -4,6 +4,7 @@ import {HashRouter, Route, Switch} from 'react-router-dom';
 //pages/components
 import Navbar from "./components/Navbar"
 import Header from "./components/Header"
+import About from "./components/About"
 import Footer from "./components/Footer"
 
 
@@ -17,6 +18,7 @@ render(){
       <Route path='/' component={Navbar}/>
       <Switch>
       <Route exact path='/' component={Header}/>
+      <Route exact path='/about' component={About}/>
       </Switch>
       <Route path='/' component={Footer}/>
      </HashRouter>

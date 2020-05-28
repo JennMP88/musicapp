@@ -1,12 +1,23 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Header from "./components/Header"
 
 
-function App() {
-  return (
-   <>
-   <h1>small app</h1>
-   </>
-  );
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state={
+
+    }
+  }
+render(){
+  return(
+    <>
+      <Header/>
+    
+    </>
+  )
+}
+
 }
 
 export default App;

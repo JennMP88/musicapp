@@ -8,7 +8,7 @@ const Navbar=(props)=>{
 return(
 <>
 <nav>
-  <ul class="navigation">
+  <ul className="navigation">
     <li>
       <Link className="page" to="/about">About</Link>
     </li>

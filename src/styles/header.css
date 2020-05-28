@@ -32,7 +32,7 @@ body {
     animation: moveInRight 1s ease-out; }
 
 .header {
-  height: 75vh;
+  height: 80vh;
   background-image: linear-gradient(to right bottom, rgba(176, 111, 213, 0.4), rgba(180, 119, 40, 0.4)), url(../assets/record.jpeg);
   background-size: cover;
   background-position: top;

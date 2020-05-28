@@ -1,0 +1,27 @@
+footer {
+  background-color: #ffffff;
+  padding:1.5rem;  
+}
+
+footer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer {
+  list-style: none;
+  text-align:center;
+}
+.footer li {
+  display: inline-block;
+  margin-left: 3em;
+  font-size:3.2rem;
+}
+.footer li:first-child {
+  margin: 0;
+}
+.footer li a:link {
+  text-decoration: none;
+  text-transform: uppercase;
+}

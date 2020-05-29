@@ -8,9 +8,11 @@ const Navbar=(props)=>{
 return(
 <>
 <nav>
+
+ 
   <ul className="navigation">
     <li>
-      <Link className="page" to="/about">About</Link>
+      <Link className="page" to="/">Home</Link>
     </li>
 
     <li>
@@ -20,6 +22,7 @@ return(
     <li>
       <Link className="page" to="/genres">Genres</Link>
     </li>
+   
      
   </ul>
 

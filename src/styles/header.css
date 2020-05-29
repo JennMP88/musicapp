@@ -9,6 +9,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   box-sizing: border-box; 
+  
   }
 
 .heading-primary {
@@ -51,9 +52,11 @@ body {
 
 .about{
   margin-top: 16rem;
+  
 }
 .content{
   font-family: 'Lato', sans-serif;
+  
 }
 
 @keyframes moveInLeft {

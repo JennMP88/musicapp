@@ -8,23 +8,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class Listen extends React.Component{
   state={
     videos:[],
-    
+    name:''
   }
 
   //on select to listen to a specific video
-  loadVideos=(e)=>{
+  onSubmit=(e)=>{
     console.log(e.target,'Button was clicked');
     axios({
       method: 'get',
       url: 'https://www.googleapis.com/youtube/v3/search',
       params: {
         part: 'snippet',
-        maxResults: 20,
+        maxResults: 4,
         videoDefinition: 'high',
         type: 'video',
         videoEmbeddable: 'true',
         key: 'AIzaSyCMTSxecKAzvOEiyp9TFjtV7ekhGApFCBA', 
-        q: 'martinez+brothers',
+        q: this.state.searchInput,
         pageToken: ''
       }
     })
@@ -36,12 +36,6 @@ class Listen extends React.Component{
     
     })
   }
-  componentDidMount() {
-    let query = this.state.videos
-    this.loadVideos(query)
-}
-
-
   render(){
     console.log('vid',this.state.videos)
     // const results = <div className='row'>
@@ -63,34 +57,14 @@ class Listen extends React.Component{
 
 {/* map me */}
 {this.state.videos.map((e,i)=>{
-  
+  console.log('a vid',e)
   return <div>
-   <div className="card videocard" style={{ width: "18rem" }}>
-    
-    <img src={e.snippet.thumbnails.default.url} className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h5 className="card-title">{e.snippet.title}</h5>
-      <p className="card-text">
-      {e.snippet.title}
-      </p>
-      <button onClick={this.onSubmit} className="btn btn-primary">
-        Listen
-      </button>
-    </div>
-  </div>
-
-
-
+    {<img src={e.snippet.thumbnails.default.url} alt='vid' />}
     </div>
 })}
      
   {/* here */}
          
-
-
-
-
-
 
         </div>
 

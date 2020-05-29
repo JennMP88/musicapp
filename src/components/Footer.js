@@ -10,7 +10,7 @@ const Footer=(props)=>{
 return(
 <>
 <footer>
-  <ul class="footer">
+  <ul className="footer">
     <li>
       <Link className="page" to="/"><img src={instagram} alt="..."  width="55" /></Link>
     </li>

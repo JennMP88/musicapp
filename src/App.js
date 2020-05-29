@@ -3,8 +3,8 @@ import {HashRouter, Route, Switch} from 'react-router-dom';
 
 //pages/components
 import Navbar from "./components/Navbar"
-import Header from "./components/Header"
-import About from "./components/About"
+import Main from "./components/Main"
+import Listen from "./components/Listen"
 import Genres from "./components/Genres"
 import Footer from "./components/Footer"
 
@@ -18,9 +18,9 @@ render(){
     <HashRouter>
       <Route path='/' component={Navbar}/>
       <Switch>
-      <Route exact path='/' component={Header}/>
-      <Route exact path='/about' component={About}/>
-      <Route exact path='/genres' component={Genres}/>
+      <Route exact path='/' component={Main}/>
+      <Route exact path='/listen' component={Listen}/>
+      <Route exact path='/genres' component={Genres}/> 
       </Switch>
       <Route path='/' component={Footer}/>
      </HashRouter>

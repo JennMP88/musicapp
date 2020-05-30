@@ -21,7 +21,7 @@ class Listen extends React.Component {
         videoDefinition: "high",
         type: "video",
         videoEmbeddable: "true",
-        key: "AAIzaSyA_zQkJysywrfO6Qc2ohAJOZrWAzxISb_4",
+        key: "",
         q: "martinez+brothers",
         pageToken: "",
       },

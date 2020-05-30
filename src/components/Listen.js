@@ -16,9 +16,8 @@ class Listen extends Component {
 
   // bigger function i have my input as my query, call this in all three areas
   specificArtist=(artist="martinez+brothers")=>{
-    
-    return loadVideos = (e) => {
-      axios({
+  
+      return axios({
         method: "get",
         url: "https://www.googleapis.com/youtube/v3/search",
         params: {
@@ -36,7 +35,7 @@ class Listen extends Component {
         this.setState({ videos: queryCopy });
         console.log("here", this.state.videos);
       });
-    };
+   
   }
 
   //on select to listen to a specific video

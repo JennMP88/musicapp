@@ -8,6 +8,10 @@ import Listen from "./components/Listen"
 import Genres from "./components/Genres"
 import Video from "./components/Video"
 import Footer from "./components/Footer"
+import VideoDisplay from "./components/video"
+
+
+import Video from "./containers/videocard"
 
 
 
@@ -21,7 +25,9 @@ render(){
       <Switch>
       <Route exact path='/' component={Main}/>
       <Route exact path='/listen' component={Listen}/>
-      <Route exact path='/listen/:id' component={Video}/>
+
+      <Route exact path='/listen/:id' component={VideoDisplay}/>
+
       <Route exact path='/genres' component={Genres}/> 
       </Switch>
       <Route path='/' component={Footer}/>

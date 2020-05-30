@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,11 +18,6 @@ const VideoCard = ({ image, title, id }) => {
                   <button className="btn btn-primary">Listen</button>
                 </Link>
 
-                <h1>this</h1>
-                <h1>this</h1>
-                <h1>this</h1>
-                <h1>this</h1>
-                
               </div>
             </div>
           </div>
@@ -32,3 +28,20 @@ const VideoCard = ({ image, title, id }) => {
 };
 
 export default VideoCard;
+
+import React from 'react';
+import Video from "../components/video";
+
+class VideoDisplay extends React.Component {
+
+  render(){
+    return(
+    <Video id={this.props.match.params.id} />
+  )
+
+
+}
+}
+
+export default VideoDisplay;
+

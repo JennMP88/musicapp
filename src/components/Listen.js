@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import VideoCard from "../containers/videocard";
-import "../styles/listen.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/listen.css";
+
 
 
 class Listen extends Component {
@@ -24,8 +25,7 @@ class Listen extends Component {
         videoDefinition: "high",
         type: "video",
         videoEmbeddable: "true",
-        key: "",
-
+        key: "AIzaSyB6qSjRtjVMlBd8KpW-fP8IBeApweXE43U",
         q: "martinez+brothers",
         pageToken: "",
       },
@@ -54,17 +54,20 @@ class Listen extends Component {
           </div>
 
           <div className="row">
-            <div className="col-sm">
+         
+              
               {this.state.videos.map((e, i) => {
                 return (
+                  <div className="col-sm-3">
                   <VideoCard
                     id={e.id.videoId}
                     image={e.snippet.thumbnails.medium.url}
                     title={e.snippet.title}
                   />
+                     </div>
                 );
               })}
-            </div>
+         
 
          
 

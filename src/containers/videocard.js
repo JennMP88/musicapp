@@ -1,17 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Video from "../components/video";
+
+class VideoDisplay extends React.Component {
+
+  render(){
+    return(
+    <Video id={this.props.match.params.id} />
+  )
 
 
-const VideoClicked = ({ image, title, id }) => {
-
-  return (
-
-
-    <div className='col-6'>
-      <Link to={'/video/'+id}><img src={image} alt='' style={{width: '100%', height: 'auto'}} /></Link>
-      <h5>{title}</h5>
-    </div>
-  );
+}
 }
 
-export default VideoClicked;
+export default VideoDisplay;

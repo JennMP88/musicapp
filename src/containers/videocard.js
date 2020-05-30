@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const VideoCard = ({ image, title, id }) => {
+const VideoClicked = ({ image, title, id }) => {
 
   return (
 
@@ -14,4 +14,4 @@ const VideoCard = ({ image, title, id }) => {
   );
 }
 
-export default VideoCard;
+export default VideoClicked;

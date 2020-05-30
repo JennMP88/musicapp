@@ -48,19 +48,19 @@ class Listen extends React.Component {
             <div className="col-4 bottomline">Martinez Brothers</div>
           </div>
 
-          <div className="row row-cols-4">
+          <div className="row row-cols-4 overflow-auto" >
             {/* map me */}
             {this.state.videos.map((e, i) => {
               return (
                 <div>
-                  <div className="card videocard" style={{ width: "18rem" }}>
+                  <div className="card videocard" >
                     <img
                       src={e.snippet.thumbnails.default.url}
                       className="card-img-top"
                       alt="..."
                     />
                     <div className="card-body">
-                      <h5 className="card-title">{e.snippet.title}</h5>
+                      <h5 className="card-title ">{e.snippet.title}</h5>
                       <p className="card-text">{e.snippet.title}</p>
                       <button
                         onClick={this.onSubmit}

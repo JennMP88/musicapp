@@ -10,43 +10,48 @@ class Listen extends Component {
 
   state = {
     videos: [],
+    // people:["martinez+brothers","paulkalkbrenner"]
    
   };
 
-  //on select to listen to a specific video
-  loadVideos = (e) => {
-    axios({
-      method: "get",
-      url: "https://www.googleapis.com/youtube/v3/search",
-      params: {
-        part: "snippet",
+  // bigger function i have my input as my query, call this in all three areas
+  specificArtist=(artist="martinez+brothers")=>{
+    
+    return loadVideos = (e) => {
+      axios({
+        method: "get",
+        url: "https://www.googleapis.com/youtube/v3/search",
+        params: {
+          part: "snippet",
+          maxResults: 1,
+          videoDefinition: "high",
+          type: "video",
+          videoEmbeddable: "true",
+          key: "AIzaSyB6qSjRtjVMlBd8KpW-fP8IBeApweXE43U",
+          q: artist,
+          pageToken: "",
+        },
+      }).then((response) => {
+        let queryCopy = [...response.data.items];
+        this.setState({ videos: queryCopy });
+        console.log("here", this.state.videos);
+      });
+    };
+  }
 
-        maxResults: 1,
-        videoDefinition: "high",
-        type: "video",
-        videoEmbeddable: "true",
-        key: "AIzaSyB6qSjRtjVMlBd8KpW-fP8IBeApweXE43U",
-        q: "martinez+brothers",
-        pageToken: "",
-      },
-    }).then((response) => {
-      let queryCopy = [...response.data.items];
-      this.setState({ videos: queryCopy });
-      console.log("here", this.state.videos);
-    });
-  };
+  //on select to listen to a specific video
+ 
   // renders videos to display thumbnails
   componentDidMount() {
     let query = this.state.videos;
-    this.loadVideos(query);
+    this.specificArtist(query);
   }
 
 
   render() {
     console.log("video", this.state.videos);
     
-    return (
-      
+    return (   
       <>
         <div className="container">
           <div className="row">
@@ -65,15 +70,16 @@ class Listen extends Component {
                     title={e.snippet.title}
                   />
                      </div>
+                     
                 );
               })}
          
-
-         
-
           </div>
         </div>
    
+
+   {/* second  */}
+ 
       </>
     );
   }

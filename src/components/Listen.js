@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import axios from "axios";
-import { Link } from 'react-router-dom';
 import VideoCard from "../containers/videocard";
 import "../styles/listen.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,11 +20,11 @@ class Listen extends Component {
       params: {
         part: "snippet",
 
-        maxResults: 4,
+        maxResults: 1,
         videoDefinition: "high",
         type: "video",
         videoEmbeddable: "true",
-        key: "",
+        key: "AIzaSyB6qSjRtjVMlBd8KpW-fP8IBeApweXE43U",
 
         q: "martinez+brothers",
         pageToken: "",
@@ -71,8 +70,7 @@ class Listen extends Component {
 
           </div>
         </div>
-        {/* </div> 
-          </div>  */}
+   
       </>
     );
   }

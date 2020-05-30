@@ -7,9 +7,6 @@ class VideoPlayer extends React.Component {
 
   }
 render(){
-
-
-
   return(
 <>
 <VideoDisplay id={this.props.match.params.id} />

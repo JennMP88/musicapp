@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar"
 import Main from "./components/Main"
 import Listen from "./components/Listen"
 import Genres from "./components/Genres"
-import Video from "./components/Video"
+import VideoPlayer from "./components/videoplayer"
 import Footer from "./components/Footer"
 import VideoDisplay from "./components/video"
 

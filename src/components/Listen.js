@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import { Link } from 'react-router-dom';
-// import Video from "../containers/videocard";
+import VideoCard from "../containers/videocard";
 import "../styles/listen.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 

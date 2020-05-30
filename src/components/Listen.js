@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 class Listen extends Component {
+
   state = {
     videos: [],
    
@@ -19,11 +20,13 @@ class Listen extends Component {
       url: "https://www.googleapis.com/youtube/v3/search",
       params: {
         part: "snippet",
-        maxResults: 1,
+
+        maxResults: 4,
         videoDefinition: "high",
         type: "video",
         videoEmbeddable: "true",
-        // key: ,
+        key: "",
+
         q: "martinez+brothers",
         pageToken: "",
       },
@@ -51,36 +54,25 @@ class Listen extends Component {
             <div className="col-4 bottomline">Martinez Brothers</div>
           </div>
 
-          <div className="row row-cols-4" >
-            {/* map me */}
-            {this.state.videos.map((e, i) => {
-              return (
-                <div key={e.id}>
-                  <div className="card videocard" >
-                    <img
-                      src={e.snippet.thumbnails.default.url}
-                      className="card-img-top"
-                      alt="..."
-                    />
-                    <div className="card-body">
-                      <h5 className="card-title ">{e.snippet.title}</h5>
-                      <p className="card-text">{e.snippet.title}</p>
-                      <button
-                        onClick={this.onSubmit}
-                        className="btn btn-primary"
-                      >
-                         <Link to={'/listen/'+ e.id.videoId}>Listen</Link>
-                        
+          <div className="row">
+            <div className="col-sm">
+              {this.state.videos.map((e, i) => {
+                return (
+                  <VideoCard
+                    id={e.id.videoId}
+                    image={e.snippet.thumbnails.medium.url}
+                    title={e.snippet.title}
+                  />
+                );
+              })}
+            </div>
 
-                      </button>
-                    </div>
-                   
-                  </div>
-                </div>
-              );
-            })}
+         
+
           </div>
         </div>
+        {/* </div> 
+          </div>  */}
       </>
     );
   }

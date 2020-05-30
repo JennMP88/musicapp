@@ -1,17 +1,34 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-
-const VideoClicked = ({ image, title, id }) => {
-
+const VideoCard = ({ image, title, id }) => {
   return (
+    <>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-4">
+            <div className="card videocard">
+              <img src={image} className="card-img-top" alt="thumbnail" />
+              <div className="card-body">
+                <p className="card-title ">{title}</p>
 
+                <Link to={"/listen/" + id}>
+                  <button className="btn btn-primary">Listen</button>
+                </Link>
 
-    <div className='col-6'>
-      <Link to={'/video/'+id}><img src={image} alt='' style={{width: '100%', height: 'auto'}} /></Link>
-      <h5>{title}</h5>
-    </div>
+                <h1>this</h1>
+                <h1>this</h1>
+                <h1>this</h1>
+                <h1>this</h1>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
 
-export default VideoClicked;
+export default VideoCard;

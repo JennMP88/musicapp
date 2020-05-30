@@ -4,7 +4,6 @@ import VideoCard from "../containers/videocard";
 import "../styles/listen.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 class Listen extends React.Component {
   state = {
     videos: [],
@@ -18,11 +17,11 @@ class Listen extends React.Component {
       url: "https://www.googleapis.com/youtube/v3/search",
       params: {
         part: "snippet",
-        maxResults: 20,
+        maxResults: 4,
         videoDefinition: "high",
         type: "video",
         videoEmbeddable: "true",
-        key: "AIzaSyCMTSxecKAzvOEiyp9TFjtV7ekhGApFCBA",
+        key: "AAIzaSyA_zQkJysywrfO6Qc2ohAJOZrWAzxISb_4",
         q: "martinez+brothers",
         pageToken: "",
       },
@@ -48,33 +47,22 @@ class Listen extends React.Component {
             <div className="col-4 bottomline">Martinez Brothers</div>
           </div>
 
-          <div className="row row-cols-4 overflow-auto" >
-            {/* map me */}
-            {this.state.videos.map((e, i) => {
-              return (
-                <div>
-                  <div className="card videocard" >
-                    <img
-                      src={e.snippet.thumbnails.default.url}
-                      className="card-img-top"
-                      alt="..."
-                    />
-                    <div className="card-body">
-                      <h5 className="card-title ">{e.snippet.title}</h5>
-                      <p className="card-text">{e.snippet.title}</p>
-                      <button
-                        onClick={this.onSubmit}
-                        className="btn btn-primary"
-                      >
-                        Listen
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="row">
+            <div className="col-sm">
+              {this.state.videos.map((e, i) => {
+                return (
+                  <VideoCard
+                    id={e.id.videoId}
+                    image={e.snippet.thumbnails.medium.url}
+                    title={e.snippet.title}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
+        {/* </div> 
+          </div>  */}
       </>
     );
   }

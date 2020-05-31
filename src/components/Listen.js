@@ -35,7 +35,7 @@ class Listen extends Component {
         console.log('thisss',queryCopy)
         // every time i run the fundtion the response gets pushed instead of overwritten
         //2 diff pushed to my current vid array
-        this.setState({ videos:(this.state.video || [[]]).push(queryCopy)});
+        this.setState({ videos:( [[]]).push(queryCopy)});
         console.log("here", this.state.videos);
       });
    
@@ -51,7 +51,7 @@ class Listen extends Component {
 
 
   render() {
-    // console.log('responses', this.state.videos)
+    console.log('responses', this.state.videos)
     return (   
       <>
         <div className="container">
@@ -60,7 +60,7 @@ class Listen extends Component {
           </div>
           <div className="row">
 
-              {this.state.videos.map((e, i) => {
+              {this.state.videos[1].map((e, i) => {
                 return (
                   <div className="col-sm-3">
                   <VideoCard

@@ -42,8 +42,9 @@ class Listen extends Component {
  
   // renders videos to display thumbnails
   componentDidMount() {
-    let query = this.state.videos;
-    this.specificArtist(query);
+    // let query = this.state.videos;
+    // console.log("eww",query)
+    this.specificArtist();
   }
 
 

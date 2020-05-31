@@ -15,7 +15,7 @@ class Listen extends Component {
   };
 
   // bigger function i have my input as my query, call this in all three areas
-  specificArtist=(artist="paulkalkbrenner")=>{
+  specificArtist=(artist)=>{
   
       return axios({
         method: "get",
@@ -32,7 +32,9 @@ class Listen extends Component {
         },
       }).then((response) => {
         let queryCopy = [...response.data.items];
-        this.setState({ videos: queryCopy });
+        // every time i run the fundtion the response gets pushed instead of overwritter
+        //2 diff pushed to my current vid array
+        this.setState({ videos:(this.state.video.push(queryCopy)) });
         console.log("here", this.state.videos);
       });
    
@@ -42,11 +44,13 @@ class Listen extends Component {
  
   // renders videos to display thumbnails
   componentDidMount() {
-    this.specificArtist();
+    this.specificArtist("martinez+brothers");
+    this.specificArtist("paulkalkbrenner");
   }
 
 
   render() {
+    console.log('responses', this.state.videos)
     return (   
       <>
         <div className="container">

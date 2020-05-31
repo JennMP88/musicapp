@@ -15,7 +15,7 @@ class Listen extends Component {
   };
 
   // bigger function i have my input as my query, call this in all three areas
-  specificArtist=(artist="martinez+brothers")=>{
+  specificArtist=(artist="paulkalkbrenner")=>{
   
       return axios({
         method: "get",
@@ -42,25 +42,19 @@ class Listen extends Component {
  
   // renders videos to display thumbnails
   componentDidMount() {
-    // let query = this.state.videos;
-    // console.log("eww",query)
     this.specificArtist();
   }
 
 
   render() {
-    console.log("video", this.state.videos);
-    
     return (   
       <>
         <div className="container">
           <div className="row">
             <div className="col-4 bottomline">Martinez Brothers</div>
           </div>
-
           <div className="row">
-         
-              
+
               {this.state.videos.map((e, i) => {
                 return (
                   <div className="col-sm-3">

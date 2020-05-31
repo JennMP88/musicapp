@@ -34,7 +34,7 @@ class Listen extends Component {
         let queryCopy = [...response.data.items];
         // every time i run the fundtion the response gets pushed instead of overwritter
         //2 diff pushed to my current vid array
-        this.setState({ videos:(this.state.video.push(queryCopy)) });
+        this.setState({ videos:(this.state.video).concat(queryCopy)});
         console.log("here", this.state.videos);
       });
    

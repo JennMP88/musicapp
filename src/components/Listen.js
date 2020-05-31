@@ -10,7 +10,7 @@ class Listen extends Component {
 
   state = {
     videos: [],
-    // people:["martinez+brothers","paulkalkbrenner"]
+    
    
   };
 
@@ -32,9 +32,10 @@ class Listen extends Component {
         },
       }).then((response) => {
         let queryCopy = [...response.data.items];
-        // every time i run the fundtion the response gets pushed instead of overwritter
+        console.log('thisss',queryCopy)
+        // every time i run the fundtion the response gets pushed instead of overwritten
         //2 diff pushed to my current vid array
-        this.setState({ videos:(this.state.video).concat(queryCopy)});
+        this.setState({ videos:(this.state.video || [[]]).push(queryCopy)});
         console.log("here", this.state.videos);
       });
    
@@ -50,7 +51,7 @@ class Listen extends Component {
 
 
   render() {
-    console.log('responses', this.state.videos)
+    // console.log('responses', this.state.videos)
     return (   
       <>
         <div className="container">

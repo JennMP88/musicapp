@@ -6,11 +6,10 @@ import "../styles/listen.css";
 
 class Listen extends Component {
   state = {
-    videos: [],
-    artist: ["Martinez Brothers", "Paul Kalkbrenner"],
+    videos: {}, 
+    artist: ["Martinez Brothers", "Paul Kalkbrenner","Dennis Ferrer"],
   };
 
-  // bigger function i have my input as my query, call this in all three areas
   specificArtist = (artist) => {
     const { videos } = this.state;
     return axios({
@@ -29,33 +28,38 @@ class Listen extends Component {
     }).then((response) => {
       let queryCopy = [...response.data.items];
       console.log("thisss", queryCopy);
-      videos.push(queryCopy);
+      // artist will be the key and queryCopy is result
+      // {artistMartinez:[{result of axios}{video}{video}]=state}
+      videos[artist]=queryCopy;
       this.setState({ videos });
       console.log("here", this.state.videos);
     });
   };
 
-  //on select to listen to a specific video
+ 
 
   // renders videos to display thumbnails
   componentDidMount() {
     this.state.artist.forEach((artistName) => {
+      
       this.specificArtist(artistName);
     });
-    // this.specificArtist("martinezbrothers")
+    
   }
 
   render() {
-    // console.log('responses', this.state.videos[0])
+
     const { artist, videos } = this.state;
-    // until all videos and artist are not the same dont render
-    if (videos.length!==artist.length){
+    // until all videos and artist are not the same length don't render
+
+    // 
+    if (Object.keys(videos).length!==artist.length){
       return <div></div>
     }
     console.log('there')
     return (
       <>
-        {artist.map((artistName, i) => {
+        {artist.map((artistName) => {
           return (
             <>
               <div className="container">
@@ -63,7 +67,7 @@ class Listen extends Component {
                   <div className="col-4 bottomline">{artistName}</div>
                 </div>
                 <div className="row">
-                  {videos[i].map((e) => {
+                  {videos[artistName].map((e) => {
                     return (
                       <div className="col-sm-3">
                         <VideoCard

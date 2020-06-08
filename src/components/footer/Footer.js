@@ -1,10 +1,10 @@
 import React from 'react';
-import "../styles/footer.css"
+import "./footer.css"
 import {Link} from 'react-router-dom'
 
-const instagram=require('../assets/instagram.png')
-const twitter=require('../assets/twitter.png')
-const facebook=require('../assets/fb.png')
+const instagram=require('./assets/instagram.png')
+const twitter=require('./assets/twitter.png')
+const facebook=require('./assets/fb.png')
 
 const Footer=(props)=>{
 return(

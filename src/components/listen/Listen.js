@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-import VideoCard from "../containers/videocard";
+import VideoCard from "../videoplayer/videocard";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/listen.css";
+import "./listen.css";
+import apikey from "./api"
 
 class Listen extends Component {
   state = {
@@ -17,11 +18,11 @@ class Listen extends Component {
       url: "https://www.googleapis.com/youtube/v3/search",
       params: {
         part: "snippet",
-        maxResults: 1,
+        maxResults: 8,
         videoDefinition: "high",
         type: "video",
         videoEmbeddable: "true",
-        key: "AIzaSyDadpG0UKUoxSoP1Bsi2nuus7vanjRx3RA",
+        key: apikey, 
         q: artist,
         pageToken: "",
       },
@@ -54,15 +55,15 @@ class Listen extends Component {
 
     // 
     if (Object.keys(videos).length!==artist.length){
-      return <div></div>
+      return <div style={{minHeight:"95vh"}}></div>
     }
     console.log('there')
     return (
-      <>
+      <div style={{minHeight:"95vh"}}>
         {artist.map((artistName) => {
           return (
             <>
-              <div className="container">
+              <div className="container" >
                 <div className="row">
                   <div className="col-4 bottomline">{artistName}</div>
                 </div>
@@ -84,7 +85,7 @@ class Listen extends Component {
             </>
           );
         })}
-      </>
+     </div>
     );
   }
 }

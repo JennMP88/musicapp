@@ -1,11 +1,11 @@
 import React from 'react';
-import "../styles/genres.css"
+import "./genres.css"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Genres=(props)=>{
 return(
-  <>
+  <div style={{minHeight:"95vh"}}>
 
 <div className="container">
   <div className="row">
@@ -46,7 +46,7 @@ return(
  
 
 
-</>
+</div>
 )
 }
 export default Genres;

@@ -1,17 +1,15 @@
 import React from 'react';
-import "../styles/header.css"
+import "./header.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-
-const headphones=require('../assets/headphones.jpg')
+const headphones=require('./assets/headphones.jpg')
 const Header=(props)=>{
 return(
-  <>
+  <div style={{minHeight:"95vh"}}>
   {/* header */}
   <header className="header">
-
   <div className="text-box">   
   <h1 className="heading-primary">
       <span className="heading-primary-main">Music Records</span>
@@ -44,7 +42,7 @@ return(
 
 
 
-</>
+</div>
 )
 }
 export default Header;

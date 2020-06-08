@@ -9,8 +9,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   box-sizing: border-box; 
-  
-  }
+}
 
 .heading-primary {
   color: #fff;
@@ -36,7 +35,7 @@ body {
 
 .header {
   height: 70vh;
-  background-image: linear-gradient(to right bottom, rgba(92, 69, 105, 0.4), rgba(26, 21, 14, 0.4)), url(../assets/record.jpeg);
+  background-image: linear-gradient(to right bottom, rgba(92, 69, 105, 0.4), rgba(26, 21, 14, 0.4)), url(./assets/record.jpeg);
   background-size: cover;
   background-position: top;
   position: relative;

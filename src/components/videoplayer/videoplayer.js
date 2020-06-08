@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoDisplay from '../components/video';
+import VideoDisplay from './video';
 
 class VideoPlayer extends React.Component {
 
@@ -8,9 +8,9 @@ class VideoPlayer extends React.Component {
   }
 render(){
   return(
-<>
+<div style={{minHeight:"95vh"}}>
 <VideoDisplay id={this.props.match.params.id} />
-</>
+</div>
 
   )
   

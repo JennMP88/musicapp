@@ -4,7 +4,7 @@ Music Records
 ===
 
 <h2>Music Application</h2>
-Front end applicaiton that allows users to listen to most recent youtube uploads of three specific DJs known. rent a bike along with bike accesories and insurance. Item selected upon clicking "Rent It" button validates the user's selection. Users may then proceed to checkout by clicking the displayed cart on the top right corner. Upon clicking the cart, a list of items,item price and total price display to the screen.  Cart also allows user to unselect an item from their cart.
+FrontEnd applicaiton that allows users to listen to most recent youtube uploads of three specific known DJs. Upon clicking on video page, users can comment to specified video.
 
 <h2>Screenshots</h2>
 

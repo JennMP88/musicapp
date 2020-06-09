@@ -4,7 +4,7 @@ Music Records
 ===
 
 <h2>Music Application</h2>
-FrontEnd applicaiton that allows users to listen to most recent youtube uploads of three specific known DJs. Upon clicking on video page, users can comment to specified video.
+FrontEnd application that allows users to listen to most recent youtube uploads of three specific known DJs. Upon clicking on video page, users can comment to specified video.
 
 
 <h2>Installation</h2>

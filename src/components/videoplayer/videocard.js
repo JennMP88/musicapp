@@ -10,7 +10,7 @@ const VideoCard = ({ image, title, id }) => {
         <div className="card-body">
           <p className="card-title ">{title}</p>
 
-          <Link to={"/listen/" + id}>
+          <Link to={"/listen/" + id }>
             <button className="btn btn-primary">Listen</button>
           </Link>
         </div>

@@ -18,7 +18,7 @@ class Listen extends Component {
       url: "https://www.googleapis.com/youtube/v3/search",
       params: {
         part: "snippet",
-        maxResults: 8,
+        maxResults: 1,
         videoDefinition: "high",
         type: "video",
         videoEmbeddable: "true",

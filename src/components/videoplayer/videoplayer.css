@@ -1,0 +1,31 @@
+.video{
+  display:grid;
+  grid-template-columns: 20px repeat(12, minmax(115px, 1fr)) 50px;
+  grid-template-rows: 20px repeat(7, minmax(100px, .3fr));
+}
+
+.vidpicked{
+  grid-column: 3/3;
+  grid-row:2/4;  
+}
+
+.forms{
+  grid-column: 8/12;
+  grid-row:2/5;  
+}
+
+.commentbox{
+  border:2px solid black; 
+  min-height:150px;
+  min-width:400px;
+}
+
+.formsdisplay{
+  grid-column: 3/-4;
+  grid-row:4/7; 
+}
+.comments{
+  border:2px solid black; 
+  min-height:150px;
+  min-width:400px;
+}

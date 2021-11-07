@@ -9,16 +9,12 @@ const VideoDisplay = ({id}) => {
 
   return (
     <div style={{minHeight:"95vh"}}>
-  <div class="container">
-  <div class="row">
-  <div class="col-8">
-  <iframe title='yt-video' type="text/html" width="640" height="360"
+  
+  <iframe title='yt-video' type="text/html" width="500" height="360"  
+  // width="640"
      src={link} frameBorder="0"></iframe>
   </div>
-  </div>
-  </div>
- 
-     </div>
+
   );
 }
 

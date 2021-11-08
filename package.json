@@ -2,7 +2,7 @@
   "name": "musicrecords",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://jennmp88.github.io",
+  "homepage": "musicsoulslist.com",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -14,9 +14,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
-  
   "scripts": {
-    
     "start": "react-scripts start",
     "deploy": "node --version",
     "build": "react-scripts build",

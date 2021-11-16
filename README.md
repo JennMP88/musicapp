@@ -13,4 +13,4 @@ npm install to download necessary packages if project is cloned
 React, Bootstrap, Figma
 
 <h2>Author</h2>
-Jennifer Perez
+Perez

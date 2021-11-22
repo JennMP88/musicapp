@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/JennMP88/musicapp/static/css/main.6863c08c.chunk.css",
+    "main.js": "/JennMP88/musicapp/static/js/main.1fbd40db.chunk.js",
+    "main.js.map": "/JennMP88/musicapp/static/js/main.1fbd40db.chunk.js.map",
+    "runtime-main.js": "/JennMP88/musicapp/static/js/runtime-main.baa73219.js",
+    "runtime-main.js.map": "/JennMP88/musicapp/static/js/runtime-main.baa73219.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/JennMP88/musicapp/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.1dbcc47c.chunk.js": "/JennMP88/musicapp/static/js/2.1dbcc47c.chunk.js",
+    "static/js/2.1dbcc47c.chunk.js.map": "/JennMP88/musicapp/static/js/2.1dbcc47c.chunk.js.map",
+    "index.html": "/JennMP88/musicapp/index.html",
+    "precache-manifest.ac4f7c991fcbb88f55e97f46d66da747.js": "/JennMP88/musicapp/precache-manifest.ac4f7c991fcbb88f55e97f46d66da747.js",
+    "service-worker.js": "/JennMP88/musicapp/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/JennMP88/musicapp/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.6863c08c.chunk.css.map": "/JennMP88/musicapp/static/css/main.6863c08c.chunk.css.map",
+    "static/js/2.1dbcc47c.chunk.js.LICENSE.txt": "/JennMP88/musicapp/static/js/2.1dbcc47c.chunk.js.LICENSE.txt",
+    "static/media/headphones.jpg": "/JennMP88/musicapp/static/media/headphones.5559c597.jpg",
+    "static/media/header.css": "/JennMP88/musicapp/static/media/record.91da7eb4.jpeg",
+    "static/media/twitter.png": "/JennMP88/musicapp/static/media/twitter.828177fd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.baa73219.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.1dbcc47c.chunk.js",
+    "static/css/main.6863c08c.chunk.css",
+    "static/js/main.1fbd40db.chunk.js"
+  ]
+}

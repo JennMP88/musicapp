@@ -22,7 +22,7 @@ class Listen extends Component {
         videoDefinition: "high",
         type: "video",
         videoEmbeddable: "true",
-        key: apikey, 
+        // key: apikey, 
         q: artist,
         pageToken: "",
       },
